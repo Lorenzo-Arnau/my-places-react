@@ -1,8 +1,13 @@
 import React, {Fragment,Component} from 'react';
-  import escapeRegExp from 'escape-string-regexp'
-  import sortBy from 'sort-by'
-    import { withStyles } from '@material-ui/core/styles';
-    import TextField from '@material-ui/core/TextField';
+import escapeRegExp from 'escape-string-regexp'
+import sortBy from 'sort-by'
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+
+
+
+
+    let filteredPlaces
 
     const styles = theme => ({
       container: {
@@ -12,7 +17,7 @@ import React, {Fragment,Component} from 'react';
       textField: {
         marginLeft: 20,
         marginRight: 20,
-        //width: 200,
+        width: 200,
         display:'flex'
       },
       dense: {
@@ -35,9 +40,9 @@ import React, {Fragment,Component} from 'react';
           query:query
         })
       }
+    
       render(){
         const { classes } = this.props;
-        let filteredPlaces
         if(this.state.query){
           const searchMatch = new RegExp(escapeRegExp(this.state.query),'i')
           filteredPlaces= this.props.myplaces.filter((place) => searchMatch.test(place.name)
@@ -49,7 +54,7 @@ import React, {Fragment,Component} from 'react';
           <Fragment>
             <TextField
                 id="standard-search"
-                label="Search Place"
+                label="Cerca qui"
                 type="search"
                 className={classes.textField}
                 margin="normal"
@@ -67,7 +72,7 @@ import React, {Fragment,Component} from 'react';
                     <p className='place-title'>{myplace.name}</p>
                     <p>{myplace.type}</p>
                   </div>
-                  <button className='place-remove'>
+                  <button className='place-remove' onClick={()=> this.props.onremove(myplace)}>
                     Remove
                   </button>
 
