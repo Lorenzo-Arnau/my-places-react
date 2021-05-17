@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import MyPlacesList from './MyPlacesList';
-import 'materialize-css/dist/css/materialize.min.css';
 import '../index.css';
 
 class Main extends Component{
@@ -118,8 +117,8 @@ class Main extends Component{
     render(){
       return(
         <div>
-          <Header titolo ='My Places' subtitle='Lista Attrazioni'></Header>
-          <MyPlacesList onremove={this.removeAttraction} myplaces={this.state.attractions}></MyPlacesList>
+          <Header titolo ='Posti Storici, Torino' subtitle='Lista Attrazioni'></Header>
+          <MyPlacesList  onremove={this.removeAttraction} myplaces={this.state.attractions}></MyPlacesList>
           <Footer></Footer>
       
         </div>

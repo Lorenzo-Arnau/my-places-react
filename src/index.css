@@ -24,12 +24,6 @@ body, .app {
   list-style-type: none;
 }
 
-.place-list {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
 
 .place-list-item {
   padding: 20px;
@@ -93,4 +87,7 @@ body, .app {
     vertical-align: middle;
     cursor: pointer;
     outline: none;
+}
+.results-p{
+ padding: 20px;
 }
