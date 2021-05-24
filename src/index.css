@@ -88,6 +88,71 @@ body, .app {
     cursor: pointer;
     outline: none;
 }
+.place-add{
+    margin: 20px;
+    align-self: center;
+    width: 120px;
+    border-radius:10px;
+    border: none;
+    background-color:#fff;
+    color:#3F51B5;
+    font-size:1.2em;
+    height:40px;
+    cursor:pointer;
+}
+.form-container{
+  width:50%;
+  min-height:500px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  margin:50px;
+}
 .results-p{
  padding: 20px;
+}
+.create-place-image {
+  min-width: 65px;
+  height: 65px;
+  background-color: white;
+  background-image: url('./components/icons/download/pin.png');
+  background-size: 32px 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+
+.place-form {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.create-place-details {
+  margin-left: 20px;
+}
+.create-place-details input {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: inherit;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: 0;
+}
+
+
+.create-place-details button {
+  margin-top: 20px;
+  background: #ccc;
+  padding: 10px;
+  font-size: inherit;
+  border: none;
+  outline: 0;
+  border-radius:10px;
+  background-color:#3F51B5;
+  color:#fff;
 }

@@ -1,5 +1,11 @@
 import ReactDom from 'react-dom';
-import Main from './components/Main'
+import Main from './components/Main';
+import {BrowserRouter} from 'react-router-dom';
 
+ReactDom.render(
+    <BrowserRouter>
+        <Main>
 
-ReactDom.render(<Main></Main>,document.getElementById('root'))
+        </Main>
+    </BrowserRouter>,
+document.getElementById('root'))

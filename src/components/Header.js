@@ -2,33 +2,10 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import {Link} from 'react-router-dom';
 import '../index.css';
 import Typography from '@material-ui/core/Typography';
 import { fade, makeStyles } from '@material-ui/core/styles';
-
-
-// class Header extends Component{
-//     render(){
-      
-//       return(
-//         this.props,
-//         <nav>
-//         <div className="nav-wrapper">
-//           <a href="#" className="brand-logo">{this.props.titolo}</a>
-//           <ul id="nav-mobile" className="right hide-on-med-and-down">
-//             <li><a href="#">{this.props.subtitle}</a></li>
-//           </ul>
-//         </div>
-//       </nav>
-//         )
-//       }
-//     }
-
-//     export default Header
-
-
-
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -95,8 +72,11 @@ export default function Header(props) {
           <Typography className={classes.title} variant="h6" noWrap>
           {props.titolo}
           </Typography>
-         
-
+          <Link to={props.appState !=='create'? '/create' : '/'}>
+          <button className='place-add' onClick={()=> props.onNavigation()}>
+                  { props.button}
+            </button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
